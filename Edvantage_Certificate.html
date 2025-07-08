@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="certificate.css" />
+    <title>Edvantage_Certificate_Generate</title>
+    <link rel="stylesheet" href="certificate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>N Level Certificate Form</h1>
+      <form action="" id="certificateForm">
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Name : </span>
+            <input type="text" placeholder="Enter Student Name" id="s_Name" />
+          </div>
+        </div>
+        <br/>
+           <div class="user_detail">
+          <div class="input_box">
+            <span> Birthday : </span>
+            <input type="date" id="birth_Day" />
+          </div>
+        </div>
+           <br/>
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Course : </span>
+            <!-- <input type="text" placeholder="Enter Student Name" /> -->
+             <select name="Course" id="course">
+                <option value="日本語初級 I  (N5レベル)">日本語初級 I  (N5レベル)</option>
+                <option value="日本語初級 II (N4レベル)">日本語初級 II (N4レベル)</option>
+                <option value="日本語中級 I  (N3レベル)">日本語中級 I  (N3レベル)</option>
+                <option value="日本語中級 II (N2レベル)">日本語中級 II (N2レベル)</option>
+                <option value="日本上級      (N1レベル)">日本上級      (N1レベル)</option>
+                <option value="会話 I (初級レベル)">会話 I (初級レベル)</option>
+                <option value="会話 II (初級レベル)">会話 II (初級レベル)</option>
+            
+             </select>
+          </div>
+        </div>
+        <br />
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Course Period : </span>
+            <input type="date" id="start_Date" placeholder="Start Date" />
+            <input type="date" id="end_Date" placeholder="End Date" />
+          </div>
+        </div>
+        <br />
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Study Schedule : </span>
+             <select name="Schedule" id="schedule">
+                <option value="火～木(2 時間/日)">火～木(2 時間/日)</option>
+                <option value="火～金(2 時間/日)">火～金(2 時間/日)</option>
+                <option value="火～金(3 時間/日)">火～木(3 時間/日)</option>                     
+             </select>
+
+          </div>
+        </div>
+        <br />
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Study Hours : </span>
+            <input type="text" placeholder="Enter Number" id="study_Hour"/>
+          </div>
+        </div>
+        <br />
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Attendance Rate : </span>
+            <input type="text" placeholder="Enter Number" id="at_Rate"/>
+          </div>
+        </div>
+        <br />
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Textbook : </span>
+            <input type="text" placeholder="" id="textbook" />
+          </div>
+        </div>
+        <br />
+        <div class="user_detail">
+          <div class="input_box">
+            <span> Issue Date : </span>
+            <input type="date" id="issue_Date"/>
+          </div>
+        </div>
+        <br />
+        <button type="submit">Generate Certificate</button>
+      </form>
+    </div>
+    
+<div class="pdf_container" id="pdf_container">
+  
+      <div class="certificate_Frame" id="certificate_Frame">
+        <div class="container_Info">
+          <h3 class="cer_info" id="cer_Student_Name"></h3>
+          <!-- <h3 class="cer_info" id="cer_Birth_Day"></h3>
+          <h3 class="cer_info" id="cer_Course"></h3>
+          <h3 class="cer_info"id="cer_SD"></h3>
+          <h3 class="cer_info" id="cer_ED"></h3>
+          <h3 class="cer_info" id="cet_Schedule"></h3>
+          <h3 class="cer_info" id="cer_Study_Hour"></h3>
+          <h3 class="cer_info" id="cer_At_Rate"></h3>
+          <h3 class="cer_info" id="cer_Textbook"></h3>
+          <h3 class="cer_info" id="cet_Issue_Date"></h3> -->
+        </div>
+      </div>
+</div>
+    <button id="downloadBtn" type="click" >Download PDF</button>
+  </body>
+
+  <script src="certificate.js"></script>
+</html>
